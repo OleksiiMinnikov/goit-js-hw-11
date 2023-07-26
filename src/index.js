@@ -31,6 +31,7 @@ function handleFormSubmit(event) {
   btnLoadMoreEl.classList.add('is-hidden');
   const form = event.currentTarget;
   const searchQuery = form.elements['searchQuery'].value.trim();
+  pixabayAPI.page = 1; // Скидання властивості сторінки до 1 для нових пошуків
   pixabayAPI.q = searchQuery;
 
   if (!searchQuery) {
